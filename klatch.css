@@ -1,0 +1,89 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+h2 {
+    animation: flicker 3s infinite alternate;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ff7f, 0 0 20px #00ff7f, 0 0 25px #00ff7f, 0 0 30px #00ff7f, 0 0 35px #00ff7f;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #a0a0a0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }
+}
