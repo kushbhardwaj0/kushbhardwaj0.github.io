@@ -7,7 +7,17 @@
     <!-- Immediate redirect for browsers that support meta refresh -->
     <meta http-equiv="refresh" content="0;url=https://apps.apple.com/us/app/klatch-social/id6751129716">
     <!-- JavaScript fallback for browsers that ignore meta refresh -->
-    <script>window.location.replace("https://apps.apple.com/us/app/klatch-social/id6751129716");</script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
     <link rel="canonical" href="https://apps.apple.com/us/app/klatch-social/id6751129716">
 </head>
 <body>
